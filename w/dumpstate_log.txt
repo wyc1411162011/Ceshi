@@ -1,0 +1,31 @@
+can't find the pid
+Failed to find: /data/misc/anrd/
+Error opening file descriptor for /sys/kernel/debug/tracing/tracing_on: Permission denied
+execvp on command 'ss -eionptu' failed (error: No such file or directory)
+*** command 'ss -eionptu' failed: exit code 1
+/sys/block/mmcblk0/: No such file or directory
+open(/bugreports/dumpstate_lshal.txt): No such file or directory
+Adjusting max progress from 5000 to 5505
+Adjusting max progress from 5505 to 6066
+Adjusting max progress from 6066 to 6682
+Adding dir /data/log/bt (recursive: 1)
+Duration of '/data/log/bt': 0.000s
+taking late screenshot
+drop_root_user(): already running as Shell
+Error opening file:  (No such file or directory)
+*** command '/system/bin/screencap -p ' failed: exit code 1
+Failed to take screenshot on 
+Dumping current ANR traces (/data/anr/bugreport-traces.txt) to the main bugreport entry
+AddAnrTraceFiles(): dump_traces_dir=, anr_traces_dir=/data/anr, already_dumped=0
+Dumping last ANR traces (/data/anr/traces.txt) to the main bugreport entry
+Adjusting max progress from 6682 to 7353
+execvp on command 'parse_radio_log /proc/last_radio_log' failed (error: Permission denied)
+*** command 'parse_radio_log /proc/last_radio_log' failed: exit code 1
+No IDumpstateDevice implementation
+Error dumping service info: (Unknown error -1) SveService
+Can't find service: emergency_service
+Adjusting max progress from 7353 to 8090
+Adding main entry (bugreport-2020-12-30-14-10-15.txt) from /data/user_de/0/com.android.shell/files/bugreports/bugreport-2020-12-30-14-10-15.tmp to .zip bugreport
+dumpstate id 2 finished around 2020/12/30 14:11:17 (62 s)
+Adding zip text entry main_entry.txt
+dumpstate_log.txt entry on zip file logged up to here

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="tab_right_bg_color">#88ffffff</color>
+    <color name="tab_right_deep_bg_color">#eeffffff</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="tab_right_balak_bg_color">#88171717</color>
+    <color name="tab_right_balak_deep_bg_color">#ee171717</color>
+</resources>
