@@ -26,6 +26,7 @@ import android.widget.LinearLayout;
 import com.brtbeacon.sdk.demo.LwfUtil;
 import com.google.gson.reflect.TypeToken;
 import com.yonyou.ceshi.activitymode.StandardAActivity;
+import com.yonyou.ceshi.animator.AnimatorDemoActivity;
 import com.yonyou.service.MyIntentService;
 import com.yonyou.service.MyService;
 import com.yonyou.tool.GsonUtils;
@@ -97,7 +98,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context,MyFragmentDemoAcitivity.class);
+                Intent intent = new Intent(context, AnimatorDemoActivity.class);
                 startActivity(intent);
             }
         });

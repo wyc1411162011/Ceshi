@@ -20,11 +20,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:name,android:theme">
-        <activity android:name=".fragment.MyFragementShowAndHideActivity"></activity>
+        <activity android:name=".animator.AnimatorDemoActivity"></activity>
+        <activity android:name=".fragment.MyFragementShowAndHideActivity" />
         <activity android:name=".fragment.DynamicFragementActivity" />
-        <activity android:name=".fragment.MyStaticFragementActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            />
+        <activity
+            android:name=".fragment.MyStaticFragementActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity android:name=".MyFragmentDemoAcitivity" />
         <activity android:name=".LinkedHashMapActivity" />
         <activity android:name=".HandlerActivity" />
