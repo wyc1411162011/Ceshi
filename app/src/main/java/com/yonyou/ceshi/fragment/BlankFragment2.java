@@ -10,16 +10,21 @@ import com.yonyou.ceshi.R;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
-public  class ExampleFragment extends BaseFragment {
+/**
+ * Created by ufsoft on2021/3/22
+ * describle:
+ */
+public class BlankFragment2 extends BaseFragment{
     @Override
     public void onAttach(@NonNull Context context) {
         setPrintLifeCycle(true);
         super.onAttach(context);
     }
-
+    @Nullable
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.fragment_dynamic,container,false);
-        }
+        super.onCreateView(inflater,container,savedInstanceState);
+        return inflater.inflate(R.layout.fragment_blank2,container,false);
     }
+}

@@ -23,7 +23,7 @@ public class Util {
     public static String GET_URL = qianzhui+"/baidu.com";
     public static void print(Class currentClass,String content){
         String method = Thread.currentThread() .getStackTrace()[3].getMethodName();
-        Log.e("tag",currentClass.getSimpleName()+" "+ method +"  "+ content);
+        Log.e("tag",content+currentClass.getSimpleName()+" "+ method +"  ");
     }
     public static String getProcessName(Context context) {
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);

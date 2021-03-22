@@ -10,12 +10,13 @@ import com.yonyou.tool.Util;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 
 /**
  * Created by ufsoft on2020-11-10
  * describle:
  */
-public class BaseActivity extends Activity {
+public class BaseActivity extends FragmentActivity {
     private boolean isPrintLifeCycle =false;
     public Context context;
     public void setPrintLifeCycle (boolean isPrintLifeCycle){

@@ -17,10 +17,5 @@
         android:layout_height="wrap_content"
         android:text="替换左侧的"
         />
-    <Button
-        android:id="@+id/bt_replace_right"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="替换右侧的的"
-        />
+
 </LinearLayout>

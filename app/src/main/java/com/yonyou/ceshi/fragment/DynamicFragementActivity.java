@@ -18,27 +18,31 @@ import android.view.ViewGroup;
 import com.yonyou.ceshi.R;
 
 public class DynamicFragementActivity extends FragmentActivity
+
 {
+    ExampleFragment fragment;
     FragmentManager fragmentManager;
+    MyStaticLeftFragement leftFragement;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dynamic_fragement);
         fragmentManager = getSupportFragmentManager();
-        ExampleFragment fragment = new ExampleFragment();
+         fragment = new ExampleFragment();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.ll_container,fragment);
         fragmentTransaction.commit();
         findViewById(R.id.bt_replace_left).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyStaticLeftFragement fragment = new MyStaticLeftFragement();
+                 leftFragement = new MyStaticLeftFragement();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.ll_container,fragment);
+                fragmentTransaction.replace(R.id.ll_container,leftFragement);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
+
     }
 
 }
