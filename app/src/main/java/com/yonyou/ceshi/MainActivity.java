@@ -2,6 +2,7 @@ package com.yonyou.ceshi;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.Application;
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
@@ -20,6 +21,7 @@ import android.util.Log;
 import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -27,6 +29,8 @@ import com.brtbeacon.sdk.demo.LwfUtil;
 import com.google.gson.reflect.TypeToken;
 import com.yonyou.ceshi.activitymode.StandardAActivity;
 import com.yonyou.ceshi.animator.AnimatorDemoActivity;
+import com.yonyou.ceshi.dispatch.DispatchDemoActviity;
+import com.yonyou.ceshi.view.ViewDemoActivity;
 import com.yonyou.service.MyIntentService;
 import com.yonyou.service.MyService;
 import com.yonyou.tool.GsonUtils;
@@ -91,15 +95,34 @@ public class MainActivity extends BaseActivity {
             public void handleMessage(@NonNull Message msg) {
                 super.handleMessage(msg);
                 println();
+                Looper.prepare();
+                Handler handler= null;
+                handler.removeCallbacksAndMessages(null);
                 stop();
             }
         };
         findViewById(R.id.bt_executors).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                Activity activity = new Activity();
+//                Application application=getApplication();
+//                Context context = getApplicationContext();
+//                Context baseContext = getBaseContext();
+//                Log.e("tag",application.toString());
+//                Log.e("tag",context.toString());
+//                Log.e("tag",baseContext.toString());
+//                ViewGroup viewGroup;
+//
+//                getResources().finishPreloading();
+//                getTheme();
+                startActivity(DispatchDemoActviity.class);
+                Looper looper=null;
+                looper.loop();
+                Handler handler =null;
+                handler.sendEmptyMessage(0);
+                Looper.prepare();
+                Looper.loop();
 
-                Intent intent = new Intent(context, AnimatorDemoActivity.class);
-                startActivity(intent);
             }
         });
         findViewById(R.id.bt_annotation).setOnClickListener(new View.OnClickListener() {
@@ -182,4 +205,6 @@ public class MainActivity extends BaseActivity {
         super.finish();
         Log.e("tag","finish-------");
     }
+
+
 }

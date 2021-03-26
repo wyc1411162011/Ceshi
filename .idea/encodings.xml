@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/AbstractMemberStrategy.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/AbstractRequestSuccessListener.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/AbstractTransparentComponent.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/AdapteePerson.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/AdapterStudent.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/AdapterStudent1.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/BaomaCar.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/Bike.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/CommandImp.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/ConcreteCommand.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/DeepSheep.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/IBreakfast.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/ICar.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/ISafeCompnComponent.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/Invoker.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/LowPersonFactory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/MemberChujiStrategy.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/MemberGaojiStrategy.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/MemberPriceContext.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/Milk.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/Orange.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/Person.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/PersonBuilderImp.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/PersonDirector.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/Reciver.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/SafeComposite.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/SafeLeaf.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/Sheep.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/SimpleFactory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/SmartPersonBuilder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/TargetStudent.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/TransparentComposite.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/origin/Duck.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/origin/RedDuck.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/origin/YabaQuack.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/origin/YeyaDuck.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wyc/shejimoshi/origin/ZhizhijiaoQuack.java" charset="UTF-8" />
+  </component>
+</project>

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.util.Log;
+import android.view.MotionEvent;
 
 import com.google.gson.JsonObject;
 
@@ -24,6 +25,20 @@ public class Util {
     public static void print(Class currentClass,String content){
         String method = Thread.currentThread() .getStackTrace()[3].getMethodName();
         Log.e("tag",content+currentClass.getSimpleName()+" "+ method +"  ");
+    }
+    public static void print(Class currentClass, String content, MotionEvent ev){
+        String method = Thread.currentThread() .getStackTrace()[3].getMethodName();
+        String houzhui = "";
+        if(ev.getAction() == MotionEvent.ACTION_DOWN){
+            houzhui = "down";
+        }else if(ev.getAction() == MotionEvent.ACTION_MOVE){
+            houzhui = "move";
+        }else if(ev.getAction() == MotionEvent.ACTION_CANCEL){
+            houzhui ="cancel";
+        } else {
+            houzhui ="up";
+        }
+        Log.e("tag",content+currentClass.getSimpleName()+" "+ method +"  "+houzhui + "  "+ev.getAction());
     }
     public static String getProcessName(Context context) {
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);

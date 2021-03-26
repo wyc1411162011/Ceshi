@@ -110,4 +110,8 @@ public class BaseActivity extends FragmentActivity {
         }
         super.onConfigurationChanged(newConfig);
     }
+    public void startActivity(Class currentClass){
+        Intent intent = new Intent(context,currentClass);
+        startActivity(intent);
+    }
 }

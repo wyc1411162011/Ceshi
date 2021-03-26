@@ -175,7 +175,6 @@ public class WebViewActivity extends Activity {
     @Override
     public void finish() {
         super.finish();
-        Toast.makeText(this,name,2000).show();
         Log.e("tag","结束时候的当前的名字"+name);
     }
 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/bt1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="1">
+
+        </Button>
+        <Button
+            android:id="@+id/bt2"
+            android:translationZ="50px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="2">
+
+        </Button>
+            <View
+                android:id="@+id/view"
+                android:translationZ="100px"
+                android:layout_margin="100px"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:background="#ff0000"/>
+    </RelativeLayout>
+    <Button
+        android:layout_width="fill_parent"
+        android:text="平移"
+        android:id="@+id/bt"
+        android:layout_height="wrap_content"></Button>
+    <Button
+        android:layout_width="fill_parent"
+        android:text="平移之后的值"
+        android:id="@+id/bt_translate"
+        android:layout_height="wrap_content"></Button>
+</LinearLayout>
