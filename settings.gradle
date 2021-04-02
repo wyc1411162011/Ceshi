@@ -1,2 +1,5 @@
+include ':apt-processor'
+include ':apt-annotation'
+include ':processor'
 include ':app'
 rootProject.name='Ceshi'

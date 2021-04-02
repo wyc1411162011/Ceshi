@@ -1,55 +1,25 @@
 package com.yonyou.ceshi;
 
-import android.Manifest;
-import android.app.Activity;
-import android.app.Application;
-import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
-import android.util.LruCache;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.brtbeacon.sdk.demo.LwfUtil;
-import com.google.gson.reflect.TypeToken;
-import com.yonyou.ceshi.activitymode.StandardAActivity;
-import com.yonyou.ceshi.animator.AnimatorDemoActivity;
-import com.yonyou.ceshi.dispatch.DispatchDemoActviity;
-import com.yonyou.ceshi.view.ViewDemoActivity;
-import com.yonyou.service.MyIntentService;
-import com.yonyou.service.MyService;
-import com.yonyou.tool.GsonUtils;
 import com.yonyou.tool.Util;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.databinding.DataBindingUtil;
-import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends BaseActivity {
     private LinearLayout ll_parent ;
@@ -104,24 +74,12 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.bt_executors).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Activity activity = new Activity();
-//                Application application=getApplication();
-//                Context context = getApplicationContext();
-//                Context baseContext = getBaseContext();
-//                Log.e("tag",application.toString());
-//                Log.e("tag",context.toString());
-//                Log.e("tag",baseContext.toString());
-//                ViewGroup viewGroup;
-//
-//                getResources().finishPreloading();
-//                getTheme();
-                startActivity(DispatchDemoActviity.class);
-                Looper looper=null;
-                looper.loop();
-                Handler handler =null;
-                handler.sendEmptyMessage(0);
-                Looper.prepare();
-                Looper.loop();
+                Object o=ll_parent.getTag();
+                if((Boolean) o){
+                    Log.e("tag","是");
+                }
+                System.out.println((Boolean) o);
+               // startActivity(ButterKnifeAcitivity.class);
 
             }
         });
@@ -199,10 +157,13 @@ public class MainActivity extends BaseActivity {
         String code;
         T data;
     }
+    public synchronized void  eate(){
 
+    }
     @Override
     public void finish() {
         super.finish();
+        Handler handler = new Handler();
         Log.e("tag","finish-------");
     }
 
