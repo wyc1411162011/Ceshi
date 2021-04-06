@@ -332,11 +332,7 @@ public class OkHttpActivity extends BaseActivity {
         Executors.newCachedThreadPool();
     }
 
-缓存拦截器
-    判断是不是可以使用缓存，可以使用缓存返回
 
-    首先缓存必须存在，缓存满足一定的规则，必须在有效期内，不在有效期内，使用对比缓存
-    返回304之后，更新有效期
 
 
 }
