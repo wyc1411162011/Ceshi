@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.yonyou.ceshi.retrofit.RetrofitActivity;
+import com.yonyou.contentprovider.ContentProviderDemoActivity;
 import com.yonyou.tool.Util;
 
 import java.io.File;
@@ -74,12 +76,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.bt_executors).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Object o=ll_parent.getTag();
-                if((Boolean) o){
-                    Log.e("tag","是");
-                }
-                System.out.println((Boolean) o);
-               // startActivity(ButterKnifeAcitivity.class);
+                startActivity(RetrofitActivity.class);
 
             }
         });

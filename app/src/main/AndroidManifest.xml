@@ -21,7 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:name,android:theme">
-        <activity android:name="com.yonyou.apt.AptDemoActivity"></activity>
+        <activity android:name=".EventBusDemoActivity"></activity>
+        <activity android:name="com.yonyou.contentprovider.ContentProviderDemoActivity" />
+        <activity android:name="com.yonyou.apt.AptDemoActivity" />
         <activity android:name=".http.HttpDemoActivity" />
         <activity android:name=".http.HttpOriginalActivity" />
         <activity android:name=".view.ViewDemoActivity" />
@@ -70,6 +72,12 @@
         <activity android:name=".socket.UdpSocketActivity" />
         <activity android:name=".http.OkHttpActivity" />
         <activity android:name=".ButterKnifeAcitivity" />
+        <activity android:name=".retrofit.RetrofitActivity" />
+
+        <provider
+            android:name="com.yonyou.contentprovider.StudentContentProvider"
+            android:authorities="com.jrmf360.studentProvider"
+            android:exported="true" />
 
         <activity
             android:name=".WebViewActivity"
