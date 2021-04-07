@@ -1,6 +1,8 @@
 package com.wyc.shejimoshi;
 //第一种设计模式
 public class Sigleton {
+	private Sigleton(){
+	}
 	//懒汉式单例模式  3种
 	private static volatile Sigleton instance;
 	//第一种懒汉式设计模式
