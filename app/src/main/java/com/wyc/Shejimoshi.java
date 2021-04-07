@@ -83,6 +83,7 @@ public class Shejimoshi {
 			@Override
 			public void onSuccess(String message) {
 				// TODO Auto-generated method stub
+
 				
 			}
 			
