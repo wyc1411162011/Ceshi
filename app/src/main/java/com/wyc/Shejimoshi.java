@@ -55,7 +55,11 @@ public class Shejimoshi {
 		Sigleton.getInstance5();
 		
 		//第二种观察者模式用的很多没写在这里
-		//第三种模式 
+		//观察者分两个角色  主题对象（Subject）和 观察者对象或者订阅者对象（Observer）当主题对象发生改变的时候
+		//通知观察者对象，简单实现就是 观察者实现Listener  然后把这个listener添加到Subject里面负责管理
+		//观察者对象，删除添加这些操作，然后当主题改变的时候调用Listener的方法，Android 源码如button.setOnClick
+		//https://blog.csdn.net/wanggang514260663/article/details/86138144
+		//第三种模式
 		//3-1类适配器模式把 弄一个中间的适配器然后把源角色弄成转化成目标角色
 		//目标角色就是要实现成的结果  源角色就是 之前有的东西
 		//Adapter适配器角色 实现就是实现目标角色 这个是没有完成的功能 继承原角色这个是实现的
@@ -63,7 +67,8 @@ public class Shejimoshi {
 		AdapterStudent student=new AdapterStudent();
 		student.listenToTeacherSay();
 		student.study();
-		//3-2对象的适配器模式
+		//3-2对象的适配器模式 并不一定是继承关系，也可以使用多个源角色生成一个目标角色
+		//BaseListAdapter android源码中的适配器模式 源觉得是list  目标角色是ListAdapter 使用Adapter 让List转成ListAdapter
 		AdapterStudent1 objectStudent=new AdapterStudent1(new AdapteePerson());
 		objectStudent.listenToTeacherSay();
 		objectStudent.study();
