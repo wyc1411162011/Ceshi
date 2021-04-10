@@ -78,6 +78,7 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
                 startActivity(RetrofitActivity.class);
 
+
             }
         });
         findViewById(R.id.bt_annotation).setOnClickListener(new View.OnClickListener() {
