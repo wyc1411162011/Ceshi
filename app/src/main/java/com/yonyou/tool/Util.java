@@ -64,29 +64,6 @@ public class Util {
         }
     }
     public static void main(String[] args) {
-        //常规使用
-        HashMap<Object,String> hashMap = new HashMap<>();
-        Object key1 = new Object();
-        Object key2 = new Object();
-        Object key3 = new Object();
-        Object key4 = new Object();
-        Object key5 = new Object();
-        Object key6 = new Object();
-        hashMap.put(key1,"1");
-        hashMap.put(key2,"2");
-        hashMap.put(key3,"3");
-        hashMap.put(key4,"4");
-        hashMap.put(key5,"5");
-        hashMap.put(key6,"6");
-        printMap(hashMap);
-        System.gc();
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("-------------------"+hashMap.size());
-        printMap(hashMap);
     }
 
     public static String getAssertContent(Context context, String fileName)
@@ -99,7 +76,7 @@ public class Util {
             String line = "";
             String Result = "";
             while ((line = bufReader.readLine()) != null)
-                Result += line;
+                Result += line+"、";
 
             System.out.print(Result);
             return Result;

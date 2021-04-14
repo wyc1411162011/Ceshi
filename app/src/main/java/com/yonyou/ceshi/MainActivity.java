@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.wyc.jnidemo.CTest;
 import com.yonyou.ceshi.retrofit.RetrofitActivity;
 import com.yonyou.contentprovider.ContentProviderDemoActivity;
 import com.yonyou.tool.Util;
@@ -26,6 +27,9 @@ import androidx.annotation.NonNull;
 public class MainActivity extends BaseActivity {
     private LinearLayout ll_parent ;
     private Button bt_change_address;
+//    static {
+//        System.loadLibrary("native-lib");
+//    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +80,13 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.bt_executors).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Util.getAssertContent(context,"a.txt");
+
                 startActivity(RetrofitActivity.class);
+//                CTest test = new CTest();
+//                String name = test.testCeshi();
+//                Log.e("tag", name);
+//                Log.e("tag",null+" ");
 
             }
         });

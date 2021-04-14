@@ -101,7 +101,7 @@ public class Shejimoshi {
 		
 		
 		//5工厂模式
-		//5-1* 简单工厂模式可以创建一个产品
+		//5-1* 简单工厂模式可以创建一个产品，一个工厂可以创建一个种类的，多个产品
 //		 * 不符合 关闭原则，要是新加Car的时候要修改这个类，不符合
 //		 * 关闭原则 ，扩展打开，修改关闭，所以引起第二种方法，工厂方法模式
 		SimpleFactory.getCar(SimpleFactory.TYPE_BIKE).goWork();
@@ -109,11 +109,11 @@ public class Shejimoshi {
 		//这种是简单工厂的另一种写法
 		SimpleFactory.getBaomaCar().goWork();
 		SimpleFactory.getBikeCar().goWork();
-		//5-2工厂方法模式 创建一个产品，关闭原则符合，但是妈的，加一个产品，就会加一个工厂的类
+		//5-2工厂方法模式 一个工厂，创建一种产品产品，关闭原则符合，但是妈的，加一个产品，就会加一个工厂的类
 		//用的代码太多，其实官方的代码也不一定完全符合各种设计模式的原则，适合最好，简单工厂模式往往是用的最多的
 		new BaomaFactory().getCar().goWork();
 		new BikeFactory().getCar().goWork();
-		//5-3抽象工厂模式 跟抽象方法模式差不多，算是一个升级版本 可以生成一系列产品
+		//5-3抽象工厂模式 一个工厂，可以创建多种类型的产品，跟抽象方法模式差不多，算是一个升级版本 可以生成一系列产品
 		new LowPersonFactory().getCar().goWork();
 		new  LowPersonFactory().getBreakfast().eat();
 		
@@ -122,6 +122,7 @@ public class Shejimoshi {
 		//6建造者模式 https://www.cnblogs.com/kangsir/p/6653233.html
 		//https://blog.csdn.net/zhangxing52077/article/details/79462539
 		//用于建造复杂的对象，创建一个对象，需要初始化他的内部对象，比如成员变量
+		//Builder负责产品的创建，组装弄一些初始值也可以设置，生成对象
 		//，让创建和它的表示分离（个人理解就是内部实现）
 		//我的理解是先有一个具体的产品，注意是具体的，没有接口，所有就要把产品抽离出来
 		//弄一个接口然后里面规定他的表示方法 建造者角色（Builder）在弄一个具体Builder类来

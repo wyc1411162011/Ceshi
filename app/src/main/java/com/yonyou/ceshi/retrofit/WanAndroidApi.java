@@ -30,7 +30,7 @@ import retrofit2.http.Url;
     @GET("project/tree/json")
     public Call<ProjectBean> getProject();
 
-    @GET("project/tree/json")
+    @GET("project/tree/json?name=wyc")
     public Call<ProjectBeanResult> getProject1();
     @HTTP(method = "get",path = "project/tree/json")
     public Call<ResponseBody> example();//默认返回的是ResponseBody ,返回实体类的上面的是由GsonConverterFactory转的ResponseBody形成的

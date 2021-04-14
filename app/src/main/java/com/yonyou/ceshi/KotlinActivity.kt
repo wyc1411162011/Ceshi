@@ -9,7 +9,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.gson.JsonObject
+import com.yonyou.ceshi.retrofit.Entity
+import com.yonyou.ceshi.retrofit.Entity.*
+import com.yonyou.kotlin.eight.text
 import com.yonyou.tool.Util
+import java.util.concurrent.Executor
 
 /**
  *
@@ -18,17 +22,20 @@ import com.yonyou.tool.Util
  */
 class KotlinActivity : Activity() {
     var et:EditText?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin)
         et =findViewById(R.id.et)
-        findViewById<Button>(R.id.bt).setOnClickListener({
-            et?.setText("最新设置的属性1234")
-        })
+//        findViewById<Button>(R.id.bt).setOnClickListener({
+//            et?.setText("最新设置的属性1234")
+//        })
         Util.print(javaClass,"调用java的方法"+"  println")
     }
     fun onclick1(view: View){
         et?.setText("设置的属性")
+        var entity: Entity? =null ;
+        text(entity?.name);
     }
     fun showToust(view:View){
         Toast.makeText(this,et?.text,Toast.LENGTH_LONG).show()
@@ -53,6 +60,10 @@ class KotlinActivity : Activity() {
 
             }
         }
+    }
+
+    fun  text(name:String?){
+        System.out.println(name+"  ");
     }
 
 }
