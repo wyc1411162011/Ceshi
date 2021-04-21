@@ -5,5 +5,4 @@ package com.wyc.jnidemo;
  * describle:
  */
 public class CTest {
-    public  native String testCeshi();
 }

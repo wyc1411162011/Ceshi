@@ -1,9 +1,11 @@
 package com.yonyou.ceshi;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,12 +14,15 @@ import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.wyc.jnidemo.CTest;
 import com.yonyou.ceshi.retrofit.RetrofitActivity;
 import com.yonyou.contentprovider.ContentProviderDemoActivity;
+import com.yonyou.customview.CustomViewActivity;
+import com.yonyou.jni.JniTest;
 import com.yonyou.tool.Util;
 
 import java.io.File;
@@ -41,6 +46,7 @@ public class MainActivity extends BaseActivity {
         File f = new File(getCacheDir(), CACHE_DIR);
 
     }
+
     public static void getAppIsFirstInstall(Context context){
         PackageManager packageManager = context.getApplicationContext().getPackageManager();
         try {
@@ -80,13 +86,13 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.bt_executors).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Util.getAssertContent(context,"a.txt");
+                startActivity(CustomViewActivity.class);
+//                WindowManager.LayoutParams mWindowAttributes = new WindowManager.LayoutParams();
+//                System.out.println(mWindowAttributes.width+"  "+mWindowAttributes.height);
+//                Log.e("tag",mWindowAttributes.width+"  "+mWindowAttributes.height);
+//                new JniTest().test("android传递");
+//                new JniTest().sayHello(1);
 
-                startActivity(RetrofitActivity.class);
-//                CTest test = new CTest();
-//                String name = test.testCeshi();
-//                Log.e("tag", name);
-//                Log.e("tag",null+" ");
 
             }
         });
@@ -174,5 +180,23 @@ public class MainActivity extends BaseActivity {
         Log.e("tag","finish-------");
     }
 
+    protected void executeBadge(int badgeCount) {
+        String INTENT_ACTION = "android.intent.action.BADGE_COUNT_UPDATE";
+         String INTENT_EXTRA_BADGE_COUNT = "badge_count";
+         String INTENT_EXTRA_PACKAGENAME = "badge_count_package_name";
+         String INTENT_EXTRA_ACTIVITY_NAME = "badge_count_class_name";
+        Intent intent = new Intent(INTENT_ACTION);
+        intent.putExtra(INTENT_EXTRA_BADGE_COUNT, badgeCount);
+        intent.putExtra(INTENT_EXTRA_PACKAGENAME, getContextPackageName());
+        intent.putExtra(INTENT_EXTRA_ACTIVITY_NAME, getEntryActivityName());
+        sendBroadcast(intent);
+    }
+    protected String getContextPackageName() {
+        return getPackageName();
+    }
+    protected String getEntryActivityName() {
+        ComponentName componentName = getPackageManager().getLaunchIntentForPackage(getPackageName()).getComponent();
+        return componentName.getClassName();
+    }
 
 }
