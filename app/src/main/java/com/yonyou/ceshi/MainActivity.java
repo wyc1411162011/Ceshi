@@ -94,6 +94,7 @@ public class MainActivity extends BaseActivity {
 //                new JniTest().sayHello(1);
 
 
+
             }
         });
         findViewById(R.id.bt_annotation).setOnClickListener(new View.OnClickListener() {
