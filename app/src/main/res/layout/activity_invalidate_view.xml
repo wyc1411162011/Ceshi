@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<Button
+    android:id="@+id/bt_main_in"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textAllCaps="false"
+    android:text="主线程Invalidate"/>
+    <Button
+        android:id="@+id/bt_other_in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="异步任务Invalidate"/>
+    <Button
+        android:id="@+id/bt_main_post"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="主线程PostInvalidate"/>
+    <Button
+        android:id="@+id/bt_other_post"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="异步任务PostInvalidate"/>
+    <com.yonyou.customview.CircleView
+        android:id="@+id/cv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#ffff00"
+        android:orientation="vertical">
+
+
+    </com.yonyou.customview.CircleView>
+</LinearLayout>

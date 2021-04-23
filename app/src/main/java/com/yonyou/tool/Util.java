@@ -11,6 +11,7 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 
 import com.google.gson.JsonObject;
 
@@ -133,4 +134,18 @@ public class Util {
     }
 
 
+    public static void printMeasureModeDes(String qianzhui,int measureSpec){
+        String result="";
+        int specMode = View.MeasureSpec.getMode(measureSpec);
+        int spaceSize = View.MeasureSpec.getSize(measureSpec);
+        String des="";
+        if(specMode == View.MeasureSpec.UNSPECIFIED){
+            des = "UNSPECIFIED";
+        }else if(specMode == View.MeasureSpec.AT_MOST){
+            des = "AT_MOST";
+        }else if(specMode == View.MeasureSpec.EXACTLY){
+            des = "EXACTLY";
+        }
+        Log.e("tag",qianzhui +" 的size"+spaceSize+" 模式"+des);
+    }
 }

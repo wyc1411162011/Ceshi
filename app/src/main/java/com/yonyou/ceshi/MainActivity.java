@@ -200,4 +200,9 @@ public class MainActivity extends BaseActivity {
         return componentName.getClassName();
     }
 
+    public static void main(String[] args) {
+        int MEASURED_STATE_TOO_SMALL = 0x01000000;
+        int number = 100 |MEASURED_STATE_TOO_SMALL;
+        System.out.println(number);
+    }
 }
