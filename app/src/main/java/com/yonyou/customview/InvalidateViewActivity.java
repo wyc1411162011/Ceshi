@@ -15,6 +15,7 @@ public class InvalidateViewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         setContentView(R.layout.activity_invalidate_view);
         cv = (CircleView)findViewById(R.id.cv);
         findViewById(R.id.bt_main_in).setOnClickListener(new View.OnClickListener() {
