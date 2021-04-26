@@ -45,7 +45,6 @@ public class MainActivity extends BaseActivity {
         String CACHE_DIR = "DataCache";
         File f = new File(getCacheDir(), CACHE_DIR);
 
-
     }
 
     public static void getAppIsFirstInstall(Context context){
