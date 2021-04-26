@@ -86,7 +86,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.bt_executors).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(CustomViewActivity.class);
+                startActivity(MySurfaceViewActviity.class);
 //                WindowManager.LayoutParams mWindowAttributes = new WindowManager.LayoutParams();
 //                System.out.println(mWindowAttributes.width+"  "+mWindowAttributes.height);
 //                Log.e("tag",mWindowAttributes.width+"  "+mWindowAttributes.height);

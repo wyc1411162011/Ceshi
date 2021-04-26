@@ -40,7 +40,7 @@ public class CircleView extends View {
         }else if(heightMeasureSpec == MeasureSpec.AT_MOST ){
             setMeasuredDimension(widthMeasureSpec,600);
         }
-        Util.print(getClass(),"");
+        Util.print(getClass(),""+" 线程名:"+Thread.currentThread().getName()+" ");
     }
 
     @Override
@@ -54,13 +54,13 @@ public class CircleView extends View {
         int radiusHeight = getHeight()-paddingTop-paddingBottom;
         int radius = Math.min(radiusWidth,radiusHeight)/2;
         canvas.drawCircle(getWidth()/2,getHeight()/2,radius,paint);
-        Util.print(getClass(),"");
+        Util.print(getClass(),""+" 线程名:"+Thread.currentThread().getName()+" ");
     }
 
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
-        Util.print(getClass(),"");
+        Util.print(getClass(),""+" 线程名:"+Thread.currentThread().getName()+" ");
     }
 }

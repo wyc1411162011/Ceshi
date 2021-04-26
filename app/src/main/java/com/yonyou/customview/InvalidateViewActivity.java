@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.SurfaceHolder;
 import android.view.View;
 
 import com.yonyou.ceshi.BaseActivity;
@@ -14,8 +15,6 @@ public class InvalidateViewActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_invalidate_view);
         cv = (CircleView)findViewById(R.id.cv);
         findViewById(R.id.bt_main_in).setOnClickListener(new View.OnClickListener() {

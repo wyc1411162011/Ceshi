@@ -28,16 +28,16 @@ android {
 //        ndk {
 //            abiFilters 'armeabi-v7a'
 //        }
-
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-                abiFilters "armeabi-v7a"
-            }
-        }
-        ndk {
-            abiFilters 'armeabi-v7a'
-        }
+//去除一下ndk的操作
+//        externalNativeBuild {
+//            cmake {
+//                cppFlags ""
+//                abiFilters "armeabi-v7a"
+//            }
+//        }
+//        ndk {
+//            abiFilters 'armeabi-v7a'
+//        }
 
     }
     buildTypes {
