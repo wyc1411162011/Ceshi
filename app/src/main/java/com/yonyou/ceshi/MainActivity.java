@@ -12,20 +12,33 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.TextUtils;
+import android.text.style.AbsoluteSizeSpan;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.wyc.base.BaseModuleActivity;
 import com.wyc.jnidemo.CTest;
 import com.yonyou.ceshi.retrofit.RetrofitActivity;
 import com.yonyou.contentprovider.ContentProviderDemoActivity;
 import com.yonyou.customview.CustomViewActivity;
 import com.yonyou.jni.JniTest;
+import com.yonyou.optimization.OptimizationDemoActivity;
 import com.yonyou.tool.Util;
 
 import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import androidx.annotation.NonNull;
 
@@ -35,18 +48,59 @@ public class MainActivity extends BaseActivity {
 //    static {
 //        System.loadLibrary("native-lib");
 //    }
+    private TextView tv_show_time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bt_change_address = (Button) findViewById(R.id.bt_change_address);
+        tv_show_time = (TextView)findViewById(R.id.tv_show_time);
         bindListeners();
         ll_parent = (LinearLayout)findViewById(R.id.ll_parent);
         String CACHE_DIR = "DataCache";
         File f = new File(getCacheDir(), CACHE_DIR);
+        Log.e("tag","第一个进程的"+Util.number);
 
     }
-
+    private void setTimeShow(TextView tv,String time){
+        time="2021-04-24 19:57";
+        if(!TextUtils.isEmpty(time) && tv != null){
+            java.text.DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+            Date date = null;
+            try {
+                date = format.parse(time);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(date);
+            int years = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+            int hour = calendar.get(Calendar.HOUR_OF_DAY);
+           int min = calendar.get(Calendar.MINUTE);
+           int week = calendar.get(Calendar.DAY_OF_WEEK);
+           //tv.setText(years+"年"+month+"月"+day+"日"+hour+"时"+min+"分"+" 星期"+week);
+        }
+        ForegroundColorSpan topColorSpan = new ForegroundColorSpan(Color.RED);
+        AbsoluteSizeSpan topAbsoluteSize =  new AbsoluteSizeSpan(25, true);
+        SpannableStringBuilder builder = new SpannableStringBuilder();
+        builder.append("哈哈");
+        builder.setSpan(topColorSpan,0,builder.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.setSpan(topAbsoluteSize,0,builder.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.append("哈哈\n");
+        int lastLength= builder.toString().length();
+        builder.append("星期日");
+        ForegroundColorSpan bottomColorSpan = new ForegroundColorSpan(Color.BLUE);
+        AbsoluteSizeSpan bottomAboluteSize = new AbsoluteSizeSpan(sp2px(context,13), true);
+        builder.setSpan(bottomColorSpan,lastLength,builder.length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.setSpan(bottomAboluteSize,lastLength,builder.length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        tv.setText(builder);
+    }
+    public  int sp2px(Context context, float spValue) {
+        int size= getResources().getDimensionPixelSize(R.dimen.font_13);
+        return size;
+    }
     public static void getAppIsFirstInstall(Context context){
         PackageManager packageManager = context.getApplicationContext().getPackageManager();
         try {
@@ -86,7 +140,9 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.bt_executors).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(MySurfaceViewActviity.class);
+                //setTimeShow(tv_show_time,null);
+                startActivity(OptimizationDemoActivity.class);
+
 //                WindowManager.LayoutParams mWindowAttributes = new WindowManager.LayoutParams();
 //                System.out.println(mWindowAttributes.width+"  "+mWindowAttributes.height);
 //                Log.e("tag",mWindowAttributes.width+"  "+mWindowAttributes.height);
@@ -201,8 +257,9 @@ public class MainActivity extends BaseActivity {
     }
 
     public static void main(String[] args) {
-        int MEASURED_STATE_TOO_SMALL = 0x01000000;
-        int number = 100 |MEASURED_STATE_TOO_SMALL;
-        System.out.println(number);
+        StringBuilder builder= new StringBuilder();
+        builder.append(1);
+        builder.append("hh");
+        System.out.println(builder);
     }
 }

@@ -24,6 +24,7 @@ import java.util.UUID;
 import java.util.WeakHashMap;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 /**
@@ -31,26 +32,29 @@ import androidx.core.content.ContextCompat;
  * describle:
  */
 public class Util {
-    public static String qianzhui ="wyc旧";
-    public static String GET_URL = qianzhui+"/baidu.com";
-    public static void print(Class currentClass,String content){
-        String method = Thread.currentThread() .getStackTrace()[3].getMethodName();
-        Log.e("tag",content+currentClass.getSimpleName()+" "+ method +"  ");
+    public static String qianzhui = "wyc旧";
+    public static String GET_URL = qianzhui + "/baidu.com";
+
+    public static void print(Class currentClass, String content) {
+        String method = Thread.currentThread().getStackTrace()[3].getMethodName();
+        Log.e("tag", content + currentClass.getSimpleName() + " " + method + "  ");
     }
-    public static void print(Class currentClass, String content, MotionEvent ev){
-        String method = Thread.currentThread() .getStackTrace()[3].getMethodName();
+
+    public static void print(Class currentClass, String content, MotionEvent ev) {
+        String method = Thread.currentThread().getStackTrace()[3].getMethodName();
         String houzhui = "";
-        if(ev.getAction() == MotionEvent.ACTION_DOWN){
+        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             houzhui = "down";
-        }else if(ev.getAction() == MotionEvent.ACTION_MOVE){
+        } else if (ev.getAction() == MotionEvent.ACTION_MOVE) {
             houzhui = "move";
-        }else if(ev.getAction() == MotionEvent.ACTION_CANCEL){
-            houzhui ="cancel";
+        } else if (ev.getAction() == MotionEvent.ACTION_CANCEL) {
+            houzhui = "cancel";
         } else {
-            houzhui ="up";
+            houzhui = "up";
         }
-        Log.e("tag",content+currentClass.getSimpleName()+" "+ method +"  "+houzhui + "  "+ev.getAction());
+        Log.e("tag", content + currentClass.getSimpleName() + " " + method + "  " + houzhui + "  " + ev.getAction());
     }
+
     public static String getProcessName(Context context) {
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         List<ActivityManager.RunningAppProcessInfo> runningApps = activityManager.getRunningAppProcesses();
@@ -65,41 +69,41 @@ public class Util {
         }
         return null;
     }
-    public static void printAA(Class currentClass,String content){
-        String method = Thread.currentThread() .getStackTrace()[3].getMethodName();
-        Log.e("tag",currentClass.getSimpleName()+" "+ method +"  "+ content);
+
+    public static void printAA(Class currentClass, String content) {
+        String method = Thread.currentThread().getStackTrace()[3].getMethodName();
+        Log.e("tag", currentClass.getSimpleName() + " " + method + "  " + content);
     }
-    private static void printMap(Map map){
+
+    private static void printMap(Map map) {
         for (Object key : map.keySet()) {
             System.out.println("key: " + key + " value: " + map.get(key));
         }
     }
+
     public static void main(String[] args) {
     }
 
-    public static String getAssertContent(Context context, String fileName)
-    {
-        try
-        {
+    public static String getAssertContent(Context context, String fileName) {
+        try {
             InputStreamReader inputReader = new
                     InputStreamReader(context.getResources().getAssets().open(fileName));
             BufferedReader bufReader = new BufferedReader(inputReader);
             String line = "";
             String Result = "";
             while ((line = bufReader.readLine()) != null)
-                Result += line+"、";
+                Result += line + "、";
 
             System.out.print(Result);
             return Result;
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
 
     }
-    public static void printlnActvityStack(Activity context){
+
+    public static void printlnActvityStack(Activity context) {
 // 获取activity任务栈
         ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         ActivityManager.RunningTaskInfo info = manager.getRunningTasks(1).get(0);
@@ -112,8 +116,9 @@ public class Util {
 
         // 包名  com.haofang.testapp
         String packageName = info.topActivity.getPackageName();
-        Log.e("tag","名字"+context.getClass().getSimpleName()+"   "+context.getTaskId()+" "+ info.description+" "+info);
+        Log.e("tag", "名字" + context.getClass().getSimpleName() + "   " + context.getTaskId() + " " + info.description + " " + info);
     }
+
     /**
      * 根据手机的分辨率从 px(像素) 的单位 转成为 dp
      */
@@ -134,18 +139,43 @@ public class Util {
     }
 
 
-    public static void printMeasureModeDes(String qianzhui,int measureSpec){
-        String result="";
+    public static void printMeasureModeDes(String qianzhui, int measureSpec) {
+        String result = "";
         int specMode = View.MeasureSpec.getMode(measureSpec);
         int spaceSize = View.MeasureSpec.getSize(measureSpec);
-        String des="";
-        if(specMode == View.MeasureSpec.UNSPECIFIED){
+        String des = "";
+        if (specMode == View.MeasureSpec.UNSPECIFIED) {
             des = "UNSPECIFIED";
-        }else if(specMode == View.MeasureSpec.AT_MOST){
+        } else if (specMode == View.MeasureSpec.AT_MOST) {
             des = "AT_MOST";
-        }else if(specMode == View.MeasureSpec.EXACTLY){
+        } else if (specMode == View.MeasureSpec.EXACTLY) {
             des = "EXACTLY";
         }
-        Log.e("tag",qianzhui +" 的size"+spaceSize+" 模式"+des);
+        Log.e("tag", qianzhui + " 的size" + spaceSize + " 模式" + des);
+    }
+
+    public static String getAddress(Object o) {
+        if (o != null) {
+            return System.identityHashCode(o) + "";
+        } else {
+            return "";
+        }
+
+    }
+
+    public static int number = 0;
+
+   public static  String getCurrentProcessName(Context context) {
+        int pid = android.os.Process.myPid();
+        ActivityManager mActivityManager = (ActivityManager) context
+                .getSystemService(Context.ACTIVITY_SERVICE);
+        for (ActivityManager.RunningAppProcessInfo appProcess : mActivityManager
+                .getRunningAppProcesses()) {
+            if (appProcess.pid == pid) {
+
+                return appProcess.processName;
+            }
+        }
+        return null;
     }
 }

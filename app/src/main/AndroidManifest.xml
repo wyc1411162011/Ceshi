@@ -21,7 +21,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:name,android:theme">
-        <activity android:name=".MySurfaceViewActviity"></activity>
+        <activity android:name="com.yonyou.optimization.UiActviity"></activity>
+        <activity android:name="com.yonyou.optimization.OptimizationStartActivity" />
+        <activity android:name="com.yonyou.optimization.HahaActivity" />
+        <activity android:name="com.yonyou.optimization.ShujujiegouActivity" />
+        <activity
+            android:name="com.yonyou.optimization.OptimizationDemoActivity"
+            android:process=":optimization" />
+        <activity android:name=".MySurfaceViewActviity" />
         <activity android:name="com.yonyou.customview.InvalidateViewActivity" />
         <activity android:name="com.yonyou.customview.CustomView1Activity" />
         <activity android:name="com.yonyou.customview.CustomViewActivity" />

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <Button
+        android:id="@+id/bt_use_map"
+        android:layout_width="fill_parent"
+        android:text="使用HashMap(创建10万个)"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/bt_use_sparsearray"
+        android:layout_width="fill_parent"
+        android:text="使用SparseArray(创建10万个)"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/bt_get"
+        android:layout_width="fill_parent"
+        android:text="读取map和SparseArray的时间"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/bt_insert_sparese"
+        android:layout_width="fill_parent"
+        android:text="插入SparseArray的数据"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/bt_read_sparese"
+        android:layout_width="fill_parent"
+        android:text="读取SparseArray的数据"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
