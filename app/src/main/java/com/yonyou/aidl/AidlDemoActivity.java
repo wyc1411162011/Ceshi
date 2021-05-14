@@ -28,6 +28,7 @@ public class AidlDemoActivity extends BaseActivity {
              iBookManager = IBookManager.Stub.asInterface(service);
 
 
+
         }
 
         @Override
