@@ -36,7 +36,7 @@ public class StudentContentProvider extends ContentProvider {
 
     @Override
     public boolean onCreate() {
-        Util.print(this.getClass(),"");
+        Util.print(this.getClass(),"----------");
         return false;
     }
 

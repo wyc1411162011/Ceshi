@@ -3,6 +3,7 @@ package com.yonyou.ceshi;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -27,6 +28,7 @@ import android.widget.TextView;
 
 import com.wyc.base.BaseModuleActivity;
 import com.wyc.jnidemo.CTest;
+import com.yonyou.aidl.AidlDemoActivity;
 import com.yonyou.ceshi.retrofit.RetrofitActivity;
 import com.yonyou.contentprovider.ContentProviderDemoActivity;
 import com.yonyou.customview.CustomViewActivity;
@@ -39,6 +41,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.CountDownLatch;
 
 import androidx.annotation.NonNull;
 
@@ -141,7 +144,14 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 //setTimeShow(tv_show_time,null);
-                startActivity(OptimizationDemoActivity.class);
+
+//                SharedPreferences sharedPreferences = getSharedPreferences("user",Context.MODE_PRIVATE);
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+//                editor.putString("name","王永超");
+//                editor.putString("age","30岁");
+//                editor.commit();
+                startActivity(AidlDemoActivity.class);
+
 
 //                WindowManager.LayoutParams mWindowAttributes = new WindowManager.LayoutParams();
 //                System.out.println(mWindowAttributes.width+"  "+mWindowAttributes.height);

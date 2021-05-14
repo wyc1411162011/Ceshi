@@ -18,6 +18,10 @@ public class Book implements Parcelable {
         bookId = in.readInt();
         bookName = in.readString();
     }
+    public Book(int bookId,String bookName){
+        this.bookId = bookId;
+        this.bookName = bookName;
+    }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
