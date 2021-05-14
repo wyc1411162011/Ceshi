@@ -27,6 +27,7 @@ public class AidlDemoActivity extends BaseActivity {
         public void onServiceConnected(ComponentName name, IBinder service) {
              iBookManager = IBookManager.Stub.asInterface(service);
 
+
         }
 
         @Override
