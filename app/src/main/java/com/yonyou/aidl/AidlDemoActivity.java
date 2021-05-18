@@ -26,12 +26,11 @@ public class AidlDemoActivity extends BaseActivity {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
              iBookManager = IBookManager.Stub.asInterface(service);
+
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-
-
 
         }
     };
