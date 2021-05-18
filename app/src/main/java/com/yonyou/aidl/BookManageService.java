@@ -30,6 +30,13 @@ public class BookManageService extends Service {
             Log.e("tag","addBook 当前的线程"+Thread.currentThread().getName());
             bookList.add(book);
         }
+
+        @Override
+        public List<Book> addAndGetBook(Book book) throws RemoteException {
+            bookList.add(book);
+            Log.e("tag","addAndGetBook 当前的线程"+Thread.currentThread().getName());
+            return bookList;
+        }
     };
     @Nullable
     @Override

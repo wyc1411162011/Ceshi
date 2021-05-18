@@ -13,4 +13,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="添加书籍列表"/>
+    <Button
+        android:id="@+id/bt_add_and_getbook"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="添加一个书籍然后获取"/>
+
 </LinearLayout>

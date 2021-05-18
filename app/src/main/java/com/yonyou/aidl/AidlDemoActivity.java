@@ -26,9 +26,6 @@ public class AidlDemoActivity extends BaseActivity {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
              iBookManager = IBookManager.Stub.asInterface(service);
-
-
-
         }
 
         @Override
@@ -39,7 +36,6 @@ public class AidlDemoActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ArrayBlockingQueue a;
         setContentView(R.layout.activity_aidl_demo);
         Intent intent = new Intent(this,BookManageService.class);
         bindService(intent,connection,BIND_AUTO_CREATE);
@@ -72,15 +68,28 @@ public class AidlDemoActivity extends BaseActivity {
                 }
             }
         });
+        findViewById(R.id.bt_add_and_getbook).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                List<Book> bookList = null;
+                try {
+                    bookList = iBookManager.getBookList();
+                    int index = bookList.size()+1;
+                    Book book = new Book(index,"第"+index+"个");
+                    List<Book>list = iBookManager.addAndGetBook(book);
+                    System.out.println();
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
 
 
 
 
 
     }
-
-
-
 
 
 
