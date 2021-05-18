@@ -32,6 +32,7 @@ public class AidlDemoActivity extends BaseActivity {
         public void onServiceDisconnected(ComponentName name) {
 
 
+
         }
     };
     @Override
