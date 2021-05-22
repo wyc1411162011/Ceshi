@@ -26,6 +26,7 @@ public class HookView {
       Field mOnClickListener = listenerInfoClass.getDeclaredField("mOnClickListener");
       // 设置访问权限
       mOnClickListener.setAccessible(true);
+
       // 获取 mOnClickListener 属性的值
       View.OnClickListener originOnClickListener = (View.OnClickListener) mOnClickListener.get(listenerInfo);
 
