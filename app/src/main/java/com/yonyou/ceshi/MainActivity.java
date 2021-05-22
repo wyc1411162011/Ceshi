@@ -32,6 +32,7 @@ import com.yonyou.aidl.AidlDemoActivity;
 import com.yonyou.ceshi.retrofit.RetrofitActivity;
 import com.yonyou.contentprovider.ContentProviderDemoActivity;
 import com.yonyou.customview.CustomViewActivity;
+import com.yonyou.hotfix.HookActivity;
 import com.yonyou.jni.JniTest;
 import com.yonyou.optimization.OptimizationDemoActivity;
 import com.yonyou.tool.Util;
@@ -150,7 +151,7 @@ public class MainActivity extends BaseActivity {
 //                editor.putString("name","王永超");
 //                editor.putString("age","30岁");
 //                editor.commit();
-                startActivity(AidlDemoActivity.class);
+                startActivity(HookActivity.class);
 
 
 //                WindowManager.LayoutParams mWindowAttributes = new WindowManager.LayoutParams();

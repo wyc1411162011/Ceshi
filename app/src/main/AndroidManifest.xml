@@ -21,7 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:name,android:theme">
-        <activity android:name="com.yonyou.aidl.AidlDemoActivity"></activity>
+        <activity android:name="com.yonyou.hotfix.HookActivity"></activity>
+        <activity android:name="com.yonyou.aidl.AidlDemoActivity" />
         <activity android:name="com.yonyou.optimization.UiActviity" />
         <activity android:name="com.yonyou.optimization.OptimizationStartActivity" />
         <activity android:name="com.yonyou.optimization.HahaActivity" />
@@ -104,9 +105,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name="com.yonyou.aidl.BookManageService"
-            android:process=":bookmanager"/>
+            android:process=":bookmanager" />
     </application>
 
 </manifest>
