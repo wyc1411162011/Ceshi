@@ -25,6 +25,7 @@ public class MeasureListView extends ListView {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public MeasureListView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+
     }
 
 //    @Override
