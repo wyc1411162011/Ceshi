@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -29,9 +30,11 @@ import android.widget.TextView;
 import com.wyc.base.BaseModuleActivity;
 import com.wyc.jnidemo.CTest;
 import com.yonyou.aidl.AidlDemoActivity;
+import com.yonyou.ceshi.dispatch.DispatchDemoActviity;
 import com.yonyou.ceshi.retrofit.RetrofitActivity;
 import com.yonyou.contentprovider.ContentProviderDemoActivity;
 import com.yonyou.customview.CustomViewActivity;
+import com.yonyou.customview.ListViewInScrollViewActivity;
 import com.yonyou.hotfix.HookActivity;
 import com.yonyou.jni.JniTest;
 import com.yonyou.optimization.OptimizationDemoActivity;
@@ -144,6 +147,14 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.bt_executors).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+                    PackageManager pm = getPackageManager();
+                    ApplicationInfo ai = pm.getApplicationInfo("com.gesoft.bit.lavendercloud", PackageManager.GET_ACTIVITIES);
+                    Log.d("tag", "!!" + ai.uid);
+                } catch (PackageManager.NameNotFoundException e) {
+                    e.printStackTrace();
+                }
+//                startActivity(ListViewInScrollViewActivity.class);
                 //setTimeShow(tv_show_time,null);
 
 //                SharedPreferences sharedPreferences = getSharedPreferences("user",Context.MODE_PRIVATE);
@@ -151,7 +162,7 @@ public class MainActivity extends BaseActivity {
 //                editor.putString("name","王永超");
 //                editor.putString("age","30岁");
 //                editor.commit();
-                startActivity(HookActivity.class);
+                //startActivity(ListViewInScrollViewActivity.class);
 
 
 //                WindowManager.LayoutParams mWindowAttributes = new WindowManager.LayoutParams();

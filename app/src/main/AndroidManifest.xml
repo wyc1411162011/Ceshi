@@ -21,7 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:name,android:theme">
-        <activity android:name="com.yonyou.hotfix.HookActivity"></activity>
+        <activity android:name="com.yonyou.customview.ListViewInScrollViewActivity"></activity>
+        <activity android:name="com.yonyou.hotfix.HookActivity" />
         <activity android:name="com.yonyou.aidl.AidlDemoActivity" />
         <activity android:name="com.yonyou.optimization.UiActviity" />
         <activity android:name="com.yonyou.optimization.OptimizationStartActivity" />

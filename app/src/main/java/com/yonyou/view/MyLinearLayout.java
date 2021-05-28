@@ -4,9 +4,12 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import com.yonyou.tool.Util;
+
+import java.util.ArrayList;
 
 import androidx.annotation.Nullable;
 
@@ -87,4 +90,9 @@ public class MyLinearLayout extends LinearLayout {
             return true;
         }
     }
-}
+
+
+
+
+
+    }
